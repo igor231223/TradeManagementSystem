@@ -1,0 +1,93 @@
+﻿<Window x:Class="TradeManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Trade Management System" Height="500" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Контрагенты" > 
+                <StackPanel Margin="5">
+                    <Button Content="Добавить контрагента" Width="200" Click="AddCounterparty_Click" Margin="5"/>
+                    <Button Content="Удалить контрагента" Width="200" Click="DeleteCounterparty_Click" />
+                    <ListView Name="CounterpartyList" Height="300" GotMouseCapture="Sorting" Margin="5">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding Type}" Width="100" />
+                                <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" />
+                                <GridViewColumn Header="Страна" DisplayMemberBinding="{Binding Country}" />
+                                <GridViewColumn Header="Директор" DisplayMemberBinding="{Binding DirectorName}" />
+                                <GridViewColumn Header="Юр. адрес" DisplayMemberBinding="{Binding LegalAddress}" />
+                                <GridViewColumn Header="Телефон" DisplayMemberBinding="{Binding Phone}" />
+                                <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" />
+                                <GridViewColumn Header="Банк" DisplayMemberBinding="{Binding BankName}" />
+                                <GridViewColumn Header="Банковский счет" DisplayMemberBinding="{Binding AccountNumber}" />
+                                <GridViewColumn Header="ИНН" DisplayMemberBinding="{Binding TaxNumber}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Загрузить" Width="200" Margin="5" Click="LoadCounterparties_Click" />
+                    <Button Content="Сохранить" Width="200" Margin="5" Click="SaveCounterparties_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Товары">
+                <StackPanel Margin="5" >
+                    <Button Content="Добавить товар" Width="200" Click="AddProduct_Click" Margin="5"/>
+                    <Button Content="Удалить товар" Width="200" Click="DeleteProduct_Click"  />
+                    <ListView Name="ProductList" Height="300" Margin="5" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" />
+                                <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category}" />
+                                <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier}" />
+                                <GridViewColumn Header="Дата доставки" DisplayMemberBinding="{Binding DeliveryDate}" />
+                                <GridViewColumn Header="Срок годности" DisplayMemberBinding="{Binding ShelfLife}" />
+                                <GridViewColumn Header="Единица измерения" DisplayMemberBinding="{Binding Unit}" />
+                                <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" />
+                                <GridViewColumn Header="Цена покупки" DisplayMemberBinding="{Binding PurchasePrice}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Загрузить" Width="200" Margin="5" Click="LoadProducts_Click" />
+                    <Button Content="Сохранить" Width="200" Margin="5" Click="SaveProducts_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Накладные">
+                <StackPanel Margin="5" >
+                    <Button Content="Добавить накладную" Width="200" Click="AddInvoice_Click" Margin="5"/>
+                    <Button Content="Удалить товар" Width="200" Click="DeleteInvoice_Click"  />
+                    <ListView Name="InvoiceList" Height="300" Margin="5" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier}" />
+                                <GridViewColumn Header="Дата доставки" DisplayMemberBinding="{Binding DeliveryDate}" />
+                                <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" />
+                                <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category}" />
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Загрузить" Width="200" Margin="5" Click="LoadInvoices_Click" />
+                    <Button Content="Сохранить" Width="200" Margin="5" Click="SaveInvoices_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Заказы">
+                <StackPanel Margin="5" >
+                    <Button Content="Добавить заказ" Width="200" Click="AddOrder_Click" Margin="5"/>
+                    <Button Content="Удалить товар" Width="200" Click="DeleteOrder_Click"  />
+                    <ListView Name="OrderList" Height="300" Margin="5" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Клиент" DisplayMemberBinding="{Binding Client}" />
+                                <GridViewColumn Header="Дата доставки" DisplayMemberBinding="{Binding DeliveryDate}" />
+                                <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" />
+                                <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category}" />
+                                <GridViewColumn Header="Цена покупки" DisplayMemberBinding="{Binding PurchasePrice}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Загрузить" Width="200" Margin="5" Click="LoadOrders_Click" />
+                    <Button Content="Сохранить" Width="200" Margin="5" Click="SaveOrders_Click" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

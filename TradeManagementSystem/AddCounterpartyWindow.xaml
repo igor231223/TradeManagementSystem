@@ -1,0 +1,54 @@
+﻿<Window x:Class="TradeManagementSystem.AddCounterpartyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить контрагента" SizeToContent="WidthAndHeight" Height="500" MinWidth="400">
+    <Grid>
+        <StackPanel>
+            <!-- Тип контрагента -->
+            <TextBlock Text="Тип контрагента:" />
+            <ComboBox Name="TypeComboBox" Width="200" Margin="0,5">
+                <ComboBoxItem Content="Поставщик" />
+                <ComboBoxItem Content="Заказчик" />
+            </ComboBox>
+            
+            <!-- Название фирмы контрагента -->
+            <TextBlock Text="Название фирмы:" />
+            <TextBox Name="NameTextBox" Width="200" Margin="0,5" />
+
+            <!-- Страна -->
+            <TextBlock Text="Страна:" />
+            <TextBox Name="CountryTextBox" Width="200" Margin="0,5" />
+
+            <!-- ФИО руководителя -->
+            <TextBlock Text="ФИО руководителя:" />
+            <TextBox Name="DirectorNameTextBox" Width="200" Margin="0,5" />
+
+            <!-- Юр. адрес -->
+            <TextBlock Text="Юридический адрес:" />
+            <TextBox Name="LegalAddressTextBox" Width="200" Margin="0,5" />
+
+            <!-- Телефон -->
+            <TextBlock Text="Телефон:" />
+            <TextBox Name="PhoneTextBox" Width="200" Margin="0,5" />
+
+            <!-- Емэйл -->
+            <TextBlock Text="Электронная почта:" />
+            <TextBox Name="EmailTextBox" Width="200" Margin="0,5" />
+
+            <!-- Название банка -->
+            <TextBlock Text="Название банка:" />
+            <TextBox Name="BankNameTextBox" Width="200" Margin="0,5" />
+
+            <!-- Номер счёта -->
+            <TextBlock Text="Номер счёта:" />
+            <TextBox Name="AccountNumberTextBox" Width="200" Margin="0,5" />
+
+            <!-- ИНН -->
+            <TextBlock Text="ИНН фирмы:" />
+            <TextBox Name="TaxNumberTextBox" Width="200" Margin="0,5" />
+
+            <!-- Кнопка сохранения -->
+            <Button Content="Сохранить" Width="200" Margin="20,5" Click="SaveButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
