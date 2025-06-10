@@ -63,6 +63,7 @@ namespace TradeManagementSystem
                 DeliveryDate = DeliveryDatePicker.SelectedDate ?? DateTime.Now,
                 Category = category,
                 Quantity = int.TryParse(QuantityTextBox.Text, out int quantity) ? quantity : 0,
+                PurchasePrice = decimal.TryParse(PriceTextBox.Text, out decimal purchasePrice) ? purchasePrice : 0,
             };
 
             _orders.Add(newOrder);
