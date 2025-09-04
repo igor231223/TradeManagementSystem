@@ -25,6 +25,7 @@ namespace TradeManagementSystem
             InitializeComponent();
             _invoices = invoices;
 
+            // Заполняем ComboBox поставщиками
             _suppliers = counterparties.Where(c => c.TypeView.ToLower() == "supplier").ToList();
             SupplierComboBox.ItemsSource = _suppliers;
             SupplierComboBox.DisplayMemberPath = "Name";
@@ -44,7 +45,7 @@ namespace TradeManagementSystem
             }
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void AddInvoice_Click(object sender, RoutedEventArgs e)
         {
 
             var category = (CategoryComboBox.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content.ToString();

@@ -33,7 +33,7 @@
             <TextBox Name="QuantityTextBox" Width="25" Margin="250,-27,0,5" />
 
             <!-- Кнопка сохранения -->
-            <Button Content="Сохранить" Width="200" Margin="20,5" Click="SaveButton_Click" />
+            <Button Content="Сохранить" Width="200" Margin="20,5" Click="AddInvoice_Click" />
         </StackPanel>
     </Grid>
 </Window>

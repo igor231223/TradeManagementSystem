@@ -32,7 +32,7 @@
                 <StackPanel Margin="5" >
                     <Button Content="Добавить товар" Width="200" Click="AddProduct_Click" Margin="5"/>
                     <Button Content="Удалить товар" Width="200" Click="DeleteProduct_Click"  />
-                    <ListView Name="ProductList" Height="300" Margin="5" >
+                    <ListView Name="ProductList" GotMouseCapture="Sorting" Height="300" Margin="5" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" />
@@ -54,7 +54,7 @@
                 <StackPanel Margin="5" >
                     <Button Content="Добавить накладную" Width="200" Click="AddInvoice_Click" Margin="5"/>
                     <Button Content="Удалить товар" Width="200" Click="DeleteInvoice_Click"  />
-                    <ListView Name="InvoiceList" Height="300" Margin="5" >
+                    <ListView Name="InvoiceList" GotMouseCapture="Sorting" Height="300" Margin="5" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier}" />
@@ -73,7 +73,7 @@
                 <StackPanel Margin="5" >
                     <Button Content="Добавить заказ" Width="200" Click="AddOrder_Click" Margin="5"/>
                     <Button Content="Удалить товар" Width="200" Click="DeleteOrder_Click"  />
-                    <ListView Name="OrderList" Height="300" Margin="5" >
+                    <ListView Name="OrderList" GotMouseCapture="Sorting" Height="300" Margin="5" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Клиент" DisplayMemberBinding="{Binding Client}" />

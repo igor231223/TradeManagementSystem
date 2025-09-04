@@ -53,6 +53,10 @@ namespace TradeManagementSystem
                 _counterparties.Remove(selected);
                 UpdateCounterpartyList();
             }
+            else
+            {
+                MessageBox.Show("Выберите контрагента для удаления.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void LoadCounterparties_Click(object sender, RoutedEventArgs e)
@@ -108,6 +112,10 @@ namespace TradeManagementSystem
                 _products.Remove(selected);
                 UpdateProductList();
             }
+            else
+            {
+                MessageBox.Show("Выберите товар для удаления.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void LoadProducts_Click(object sender, RoutedEventArgs e)
@@ -125,7 +133,7 @@ namespace TradeManagementSystem
             }
 
             JsonHelper.SaveToFile(ProductsFilePath, _products);
-            MessageBox.Show("Список пациентов сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Список товаров сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 
@@ -162,6 +170,10 @@ namespace TradeManagementSystem
                 _invoices.Remove(selected);
                 UpdateInvoiceList();
             }
+            else
+            {
+                MessageBox.Show("Выберите накладную для удаления.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
@@ -180,7 +192,7 @@ namespace TradeManagementSystem
             }
 
             JsonHelper.SaveToFile(InvoicesFilePath, _invoices);
-            MessageBox.Show("Список пациентов сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Список накладных сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 
@@ -217,6 +229,10 @@ namespace TradeManagementSystem
                 _orders.Remove(selected);
                 UpdateOrderList();
             }
+            else
+            {
+                MessageBox.Show("Выберите заказ для удаления.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void LoadOrders_Click(object sender, RoutedEventArgs e)
@@ -234,7 +250,7 @@ namespace TradeManagementSystem
             }
 
             JsonHelper.SaveToFile(OrdersFilePath, _orders);
-            MessageBox.Show("Список пациентов сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Список заказов сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
 

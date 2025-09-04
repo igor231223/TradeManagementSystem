@@ -18,7 +18,7 @@ namespace TradeManagementSystem
             _counterparties = counterparties;
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void AddCounterparty_Click(object sender, RoutedEventArgs e)
         {
             var type = (TypeComboBox.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content.ToString();
             

@@ -44,7 +44,7 @@ namespace TradeManagementSystem
             }
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void AddOrder_Click(object sender, RoutedEventArgs e)
         {
 
             var category = (CategoryComboBox.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content.ToString();

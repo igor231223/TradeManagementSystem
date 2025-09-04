@@ -48,7 +48,7 @@
             <TextBox Name="TaxNumberTextBox" Width="200" Margin="0,5" />
 
             <!-- Кнопка сохранения -->
-            <Button Content="Сохранить" Width="200" Margin="20,5" Click="SaveButton_Click" />
+            <Button Content="Сохранить" Width="200" Margin="20,5" Click="AddCounterparty_Click" />
         </StackPanel>
     </Grid>
 </Window>
